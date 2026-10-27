@@ -1,0 +1,435 @@
+controls:
+- id: AC-1
+  title: Policy and Procedures
+  statement: The organization maintains an approved access control policy and supporting procedures, reviews
+    them at least annually, and assigns an owner responsible for their upkeep and communication.
+  csf_2_0:
+  - GV.OC-03
+  - GV.OV-01
+  - GV.PO-01
+  - GV.PO-02
+  - GV.SC-03
+  - ID.IM-01
+  - ID.IM-02
+  - ID.IM-03
+  - PR.AA-01
+  - PR.AA-05
+  iso_27001_2022:
+  - '5.1'
+  - '5.2'
+  - '5.4'
+  - '5.15'
+  - '5.31'
+  - '5.36'
+  - '5.37'
+  cis_v8:
+  - '6.1'
+  - '6.2'
+  overlays:
+  - PII
+  - PHI
+  - PCI
+  - CUI
+  evidence:
+  - Approved access control policy with version history
+  - Annual policy review record
+  owner_role: CISO
+  federal_notes: 'SP 800-171 Rev. 3: 03.15.01 Policy and Procedures (NIST source mapping). SP 800-171
+    Rev. 3 does not carry a dedicated policy requirement for this family in the same form; confirm how
+    policy is evidenced for CUI systems.'
+  verify: false
+- id: AC-2
+  title: Account Management
+  statement: Every account (user, privileged, service, shared, guest) has a documented owner and purpose,
+    is approved before creation, is reviewed periodically, and is disabled promptly on role change, departure
+    or inactivity.
+  csf_2_0:
+  - PR.AA-01
+  - PR.AA-05
+  - PR.DS-10
+  - DE.CM-01
+  - DE.CM-03
+  iso_27001_2022:
+  - '5.16'
+  - '5.18'
+  - '8.2'
+  cis_v8:
+  - '4.3'
+  - '5.1'
+  - '5.3'
+  - '5.5'
+  - '5.6'
+  - '6.1'
+  - '6.2'
+  - '6.7'
+  - '6.8'
+  - '12.5'
+  overlays:
+  - PII
+  - PHI
+  - PCI
+  - CUI
+  evidence:
+  - Account inventory export from the identity provider
+  - Quarterly access review sign-offs
+  - Joiner/mover/leaver tickets with timestamps
+  owner_role: Identity and Access Management Lead
+  federal_notes: 'SP 800-171 Rev. 3: 03.01.01 Account Management (NIST source mapping). Related to SP
+    800-171 Rev. 3 requirement 03.01.01 (Account Management); confirm scope against CUI system boundary.'
+  verify: false
+- id: AC-3
+  title: Access Enforcement
+  statement: Systems enforce approved authorizations for access to information and functions, using role-based
+    or attribute-based rules that default to deny.
+  csf_2_0:
+  - PR.AA-05
+  - PR.DS-10
+  - PR.IR-01
+  iso_27001_2022:
+  - '5.15'
+  - '5.33'
+  - '8.3'
+  - '8.4'
+  - '8.18'
+  - '8.20'
+  - '8.26'
+  cis_v8:
+  - '3.3'
+  - '6.7'
+  overlays:
+  - PII
+  - PHI
+  - PCI
+  - CUI
+  evidence:
+  - Role-to-permission matrix
+  - Access control list or policy configuration exports for key systems
+  owner_role: Application Security Lead
+  federal_notes: 'SP 800-171 Rev. 3: 03.01.02 Access Enforcement (NIST source mapping). Related to SP
+    800-171 Rev. 3 requirement 03.01.02 (Access Enforcement).'
+  verify: false
+- id: AC-4
+  title: Information Flow Enforcement
+  statement: Approved flows of sensitive information between systems, network segments and external parties
+    are defined and enforced through technical controls such as firewalls, gateways and data loss prevention
+    rules.
+  csf_2_0:
+  - ID.AM-03
+  - PR.DS-10
+  - PR.IR-01
+  - DE.CM-09
+  iso_27001_2022:
+  - '5.14'
+  - '8.22'
+  - '8.23'
+  cis_v8:
+  - '3.8'
+  overlays:
+  - PII
+  - PHI
+  - PCI
+  - CUI
+  evidence:
+  - Network and data flow diagrams
+  - Firewall or gateway rule set review records
+  owner_role: Network Security Manager
+  federal_notes: 'SP 800-171 Rev. 3: 03.01.03 Information Flow Enforcement (NIST source mapping). Related
+    to SP 800-171 Rev. 3 requirement 03.01.03 (Information Flow Enforcement); cross-domain needs require
+    separate analysis.'
+  verify: false
+- id: AC-5
+  title: Separation of Duties
+  statement: Duties that could enable fraud or undetected misuse, such as requesting and approving access
+    or developing and releasing code, are assigned to different people and enforced by system roles.
+  csf_2_0:
+  - PR.AA-05
+  iso_27001_2022:
+  - '5.3'
+  cis_v8:
+  - '3.3'
+  - '6.8'
+  overlays:
+  - PCI
+  - CUI
+  evidence:
+  - Documented separation-of-duties matrix
+  - Role conflict report from the identity platform
+  owner_role: Identity and Access Management Lead
+  federal_notes: 'SP 800-171 Rev. 3: 03.01.04 Separation of Duties (NIST source mapping). Related to SP
+    800-171 Rev. 3 requirement 03.01.04 (Separation of Duties).'
+  verify: false
+- id: AC-6
+  title: Least Privilege
+  statement: Users and processes receive only the access needed for their tasks. Administrative rights
+    are separate from daily accounts, are time-bound where practical, and are reviewed regularly.
+  csf_2_0:
+  - PR.AA-05
+  iso_27001_2022:
+  - '5.15'
+  - '8.2'
+  - '8.18'
+  cis_v8:
+  - '3.3'
+  - '3.14'
+  - '5.4'
+  - '6.8'
+  overlays:
+  - PII
+  - PHI
+  - PCI
+  - CUI
+  evidence:
+  - Privileged account inventory with justifications
+  - Privileged access review records
+  - Privileged access management session logs
+  owner_role: Identity and Access Management Lead
+  federal_notes: 'SP 800-171 Rev. 3: 03.01.05 Least Privilege; 03.01.06 Least Privilege – Privileged Accounts;
+    03.01.07 Least Privilege – Privileged Functions (NIST source mapping). Related to SP 800-171 Rev.
+    3 requirements under 03.01.05 (Least Privilege) and its privileged account and function requirements;
+    confirm exact IDs.'
+  verify: false
+- id: AC-7
+  title: Unsuccessful Logon Attempts
+  statement: Systems limit consecutive failed logon attempts and apply a lockout or delay, with alerting
+    on repeated failures against sensitive accounts.
+  csf_2_0:
+  - PR.AA-03
+  iso_27001_2022:
+  - '8.5'
+  cis_v8:
+  - '4.1'
+  overlays:
+  - PII
+  - PHI
+  - PCI
+  - CUI
+  evidence:
+  - Lockout threshold configuration screenshots or exports
+  - Sample alerts for repeated failed logons
+  owner_role: Identity and Access Management Lead
+  federal_notes: 'SP 800-171 Rev. 3: 03.01.08 Unsuccessful Logon Attempts (NIST source mapping). Related
+    to SP 800-171 Rev. 3 requirement 03.01.08 (Unsuccessful Logon Attempts).'
+  verify: false
+- id: AC-8
+  title: System Use Notification
+  statement: Systems that process sensitive information display an approved notice before access stating
+    authorized use, monitoring and consequences of misuse, and require acknowledgment where appropriate.
+  csf_2_0: []
+  iso_27001_2022:
+  - '8.5'
+  cis_v8: []
+  overlays:
+  - CUI
+  evidence:
+  - Approved banner text
+  - Screenshots of the banner on representative systems
+  owner_role: Security Operations Manager
+  federal_notes: 'SP 800-171 Rev. 3: 03.01.09 System Use Notification (NIST source mapping). Federal systems
+    typically need legal-approved banner wording; confirm the corresponding SP 800-171 Rev. 3 requirement
+    ID and any contractual wording.'
+  verify: false
+- id: AC-11
+  title: Device Lock
+  statement: Endpoints and sessions lock automatically after a defined period of inactivity and require
+    re-authentication to resume.
+  csf_2_0: []
+  iso_27001_2022:
+  - '7.7'
+  - '8.1'
+  cis_v8:
+  - '4.3'
+  overlays:
+  - PII
+  - PHI
+  - PCI
+  - CUI
+  evidence:
+  - Endpoint management policy for screen lock timeout
+  - Compliance report showing lock settings applied
+  owner_role: Endpoint Engineering Manager
+  federal_notes: 'SP 800-171 Rev. 3: 03.01.10 Device Lock (NIST source mapping). Related to SP 800-171
+    Rev. 3 requirement 03.01.10 (Device Lock).'
+  verify: false
+- id: AC-12
+  title: Session Termination
+  statement: Sessions on applications and remote connections end automatically after defined inactivity
+    or time limits, or on user logout.
+  csf_2_0:
+  - PR.AA-03
+  iso_27001_2022: []
+  cis_v8:
+  - '4.3'
+  overlays:
+  - PII
+  - PHI
+  - PCI
+  - CUI
+  evidence:
+  - Application and VPN session timeout settings
+  - Test record showing session expiry
+  owner_role: Application Security Lead
+  federal_notes: 'SP 800-171 Rev. 3: 03.01.11 Session Termination (NIST source mapping). Related to SP
+    800-171 Rev. 3 requirement 03.01.11 (Session Termination).'
+  verify: false
+- id: AC-14
+  title: Permitted Actions Without Identification or Authentication
+  statement: Actions allowed without authentication, such as viewing public web content, are explicitly
+    listed, approved and kept free of sensitive data.
+  csf_2_0:
+  - PR.AA-01
+  iso_27001_2022: []
+  cis_v8: []
+  overlays: []
+  evidence:
+  - Approved list of unauthenticated actions and systems
+  - Review record of public-facing services
+  owner_role: Application Security Lead
+  federal_notes: No SP 800-171 Rev. 3 requirement derives from this control (NIST). SP 800-171 Rev. 3
+    has no direct counterpart identified here; verify before asserting coverage.
+  verify: false
+- id: AC-17
+  title: Remote Access
+  statement: Remote access methods are authorized, use encrypted channels and multi-factor authentication,
+    are routed through managed access points, and are monitored.
+  csf_2_0:
+  - PR.AA-05
+  iso_27001_2022:
+  - '5.14'
+  - '6.7'
+  - '8.16'
+  cis_v8:
+  - '3.10'
+  - '12.7'
+  - '13.5'
+  overlays:
+  - PII
+  - PHI
+  - PCI
+  - CUI
+  evidence:
+  - Remote access standard
+  - VPN or zero-trust gateway configuration showing MFA enforcement
+  - Remote access log samples
+  owner_role: Network Security Manager
+  federal_notes: 'SP 800-171 Rev. 3: 03.01.12 Remote Access (NIST source mapping). Related to SP 800-171
+    Rev. 3 requirement 03.01.12 (Remote Access); CUI traffic requires approved cryptography.'
+  verify: false
+- id: AC-18
+  title: Wireless Access
+  statement: Wireless networks are authorized, use strong authentication and encryption, and are separated
+    from sensitive internal segments. Rogue access points are detected.
+  csf_2_0:
+  - PR.AA-05
+  iso_27001_2022:
+  - '5.14'
+  - '8.20'
+  cis_v8:
+  - '4.2'
+  - '12.6'
+  overlays:
+  - PCI
+  - CUI
+  evidence:
+  - Wireless configuration standard
+  - Wireless controller settings export
+  - Rogue access point scan results
+  owner_role: Network Security Manager
+  federal_notes: 'SP 800-171 Rev. 3: 03.01.16 Wireless Access (NIST source mapping). Related to SP 800-171
+    Rev. 3 requirement 03.01.16 (Wireless Access).'
+  verify: false
+- id: AC-19
+  title: Access Control for Mobile Devices
+  statement: Mobile devices that access organizational data are enrolled in device management, encrypted,
+    protected by a passcode, and can be locked or wiped when lost.
+  csf_2_0:
+  - PR.AA-05
+  iso_27001_2022:
+  - '5.14'
+  - '7.9'
+  - '8.1'
+  cis_v8:
+  - '4.1'
+  - '4.11'
+  - '4.12'
+  - '6.4'
+  overlays:
+  - PII
+  - PHI
+  - PCI
+  - CUI
+  evidence:
+  - Mobile device management enrollment report
+  - Mobile security configuration profile
+  owner_role: Endpoint Engineering Manager
+  federal_notes: 'SP 800-171 Rev. 3: 03.01.18 Access Control for Mobile Devices (NIST source mapping).
+    Related to SP 800-171 Rev. 3 requirement 03.01.18 (Access Control for Mobile Devices).'
+  verify: false
+- id: AC-20
+  title: Use of External Systems
+  statement: Use of external systems, including personal devices and third-party platforms, to process
+    or store organizational data is limited to approved cases with defined terms and technical restrictions.
+  csf_2_0:
+  - ID.AM-02
+  - ID.AM-04
+  iso_27001_2022:
+  - '5.14'
+  - '7.9'
+  - '8.20'
+  cis_v8:
+  - '4.11'
+  - '15.3'
+  - '15.4'
+  - '15.6'
+  overlays:
+  - PII
+  - PHI
+  - PCI
+  - CUI
+  evidence:
+  - External system use standard
+  - Approved third-party and cloud service register
+  - Conditional access policy for unmanaged devices
+  owner_role: Third-Party Risk Manager
+  federal_notes: 'SP 800-171 Rev. 3: 03.01.20 Use of External Systems (NIST source mapping). Related to
+    SP 800-171 Rev. 3 requirement 03.01.20 (Use of External Systems); CUI handling by external providers
+    needs contractual flow-down review.'
+  verify: false
+- id: AC-21
+  title: Information Sharing
+  statement: Sharing of sensitive information with external parties requires a documented business need,
+    an authorization decision by the information owner, and an approved sharing method.
+  csf_2_0: []
+  iso_27001_2022: []
+  cis_v8:
+  - '15.2'
+  overlays:
+  - PII
+  - PHI
+  - CUI
+  evidence:
+  - Information sharing procedure
+  - Sample sharing approvals with data owner sign-off
+  owner_role: Data Governance Lead
+  federal_notes: No SP 800-171 Rev. 3 requirement derives from this control (NIST). CUI dissemination
+    is governed by the applicable CUI category and marking rules; this is not a direct SP 800-171 Rev.
+    3 mapping.
+  verify: false
+- id: AC-22
+  title: Publicly Accessible Content
+  statement: Only designated, trained personnel may post to public systems. Content is reviewed for non-public
+    information before posting and checked periodically.
+  csf_2_0: []
+  iso_27001_2022: []
+  cis_v8:
+  - '14.5'
+  overlays:
+  - PII
+  - CUI
+  evidence:
+  - Public content publication procedure
+  - Authorized publisher list
+  - Periodic public site review record
+  owner_role: Data Governance Lead
+  federal_notes: 'SP 800-171 Rev. 3: 03.01.22 Publicly Accessible Content (NIST source mapping). Related
+    to SP 800-171 Rev. 3 requirement 03.01.22 (Publicly Accessible Content); confirm ID.'
+  verify: false
