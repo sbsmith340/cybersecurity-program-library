@@ -30,7 +30,7 @@ private.
 | 0 | Engagement charter and organization profile | Complete |
 | 1 | Applicability, Scoping and Framework Selection Register | Complete (draft for Gate 1) |
 | 2 | CSF profile, BIA, threat profile, risk register, roadmap | Planned |
-| 3 | Unified Control Library: 18 Moderate-baseline families | In progress |
+| 3 | Unified Control Library: 18 Moderate-baseline families, 177 controls | Complete (draft for Gate 3) |
 | 4-9 | Document register, CISO and ISSO packages, overlays, readiness, QA reviews | Planned |
 
 ## What is here
@@ -47,13 +47,13 @@ private.
 
 The control records were drafted with help from an AI lab I built
 ([Multi-Agent Research Lab](https://github.com/sbsmith340/multi-agent-research-lab))
-and then checked against the published crosswalks. Across the first 113 controls:
+and then checked against the published crosswalks. Across all 177 controls:
 
 | Framework | Drafted links confirmed | Removed as unsupported | Added from the source |
 |---|---|---|---|
-| NIST CSF 2.0 | 58 | 27 | 318 |
-| ISO/IEC 27001:2022 Annex A | 46 | 42 | 156 |
-| CIS Controls v8.1 | 59 | 27 | 163 |
+| NIST CSF 2.0 | 104 | 49 | 461 |
+| ISO/IEC 27001:2022 Annex A | 108 | 59 | 248 |
+| CIS Controls v8.1 | 68 | 40 | 187 |
 
 The takeaway I apply in practice: crosswalks are only as good as their source. Treat
 any mapping that cannot be traced to the publisher as unverified, whoever wrote it.
