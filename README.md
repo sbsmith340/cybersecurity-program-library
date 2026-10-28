@@ -30,7 +30,7 @@ private.
 | 0 | Engagement charter and organization profile | Complete |
 | 1 | Applicability, Scoping and Framework Selection Register | Complete (draft for Gate 1) |
 | 2 | CSF profile, BIA, threat profile, risk register, roadmap | In progress |
-| 3 | Unified Control Library: 18 Moderate-baseline families, 177 controls | Complete (draft for Gate 3) |
+| 3 | Unified Control Library: 18 Moderate-baseline families, 177 controls | Complete (Gate 3 approved) |
 | 4-9 | Document register, CISO and ISSO packages, overlays, readiness, QA reviews | Planned |
 
 ## What is here
