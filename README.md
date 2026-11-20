@@ -29,9 +29,11 @@ private.
 |---|---|---|
 | 0 | Engagement charter and organization profile | Complete |
 | 1 | Applicability, Scoping and Framework Selection Register | Complete (draft for Gate 1) |
-| 2 | CSF profile, BIA, threat profile, risk register, roadmap | In progress |
+| 2 | CSF profile, BIA, threat profile, risk register, roadmap | Complete (Gate 2 approved) |
 | 3 | Unified Control Library: 18 Moderate-baseline families, 177 controls | Complete (Gate 3 approved) |
-| 4-9 | Document register, CISO and ISSO packages, overlays, readiness, QA reviews | Planned |
+| 4 | Controlled document register: 149 documents in 27 generation batches | Complete (Gate 4 approved) |
+| 5 | CISO enterprise package, drafted in register order with per-batch approval | In progress: 41 documents drafted and verified across 6 batches |
+| 6-9 | ISSO package, overlays, readiness, QA reviews | Planned |
 
 ## What is here
 
